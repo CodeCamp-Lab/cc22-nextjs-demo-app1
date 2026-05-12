@@ -1,0 +1,38 @@
+@reference "../globals.css";
+
+.container {
+  @apply space-y-8 py-8;
+}
+
+.title {
+  @apply text-3xl font-bold text-slate-900;
+}
+
+.subtitle {
+  @apply text-slate-500;
+}
+
+.grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.card {
+  @apply block overflow-hidden rounded-2xl border border-slate-100 bg-white transition-all hover:border-blue-100 hover:shadow-xl hover:shadow-blue-500/5 no-underline;
+}
+
+.cardContent {
+  @apply p-6;
+}
+
+.productName {
+  @apply text-lg font-bold text-slate-900 transition-colors group-hover:text-blue-600;
+}
+
+.productPrice {
+  @apply mt-2 text-sm font-medium text-slate-500;
+}
+
+.viewDetail {
+  @apply mt-4 block text-xs font-bold uppercase tracking-wider text-blue-600 opacity-100 transition-all group-hover:opacity-100;
+}
+
