@@ -1,0 +1,17 @@
+@reference "../globals.css";
+
+.section {
+  @apply mx-auto max-w-2xl space-y-8 py-16;
+}
+
+.title {
+  @apply text-4xl font-bold tracking-tight text-slate-900;
+}
+
+.content {
+  @apply space-y-6;
+}
+
+.text {
+  @apply text-lg leading-relaxed text-slate-500;
+}

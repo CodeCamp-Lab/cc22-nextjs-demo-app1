@@ -1,0 +1,33 @@
+@reference "./globals.css";
+
+.hero {
+  @apply flex flex-col items-center justify-center space-y-10 py-24 text-center;
+}
+
+.heroContent {
+  @apply space-y-6;
+}
+
+.title {
+  @apply text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl;
+}
+
+.titleAccent {
+  @apply text-blue-600;
+}
+
+.description {
+  @apply mx-auto max-w-2xl text-xl leading-relaxed text-slate-500;
+}
+
+.buttonGroup {
+  @apply flex gap-4;
+}
+
+.primaryButton {
+  @apply rounded-full bg-slate-900 px-10 py-4 text-sm font-semibold text-white transition-all hover:bg-slate-800 active:scale-95;
+}
+
+.secondaryButton {
+  @apply rounded-full border border-slate-200 px-10 py-4 text-sm font-semibold text-slate-900 transition-all hover:bg-slate-50 active:scale-95;
+}
