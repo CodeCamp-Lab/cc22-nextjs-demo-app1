@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
 export async function createNews(formData: FormData) {
-    const title = String(formData.get("tile") || "");
+    const title = String(formData.get("title") || "");
     const summary = String(formData.get("summary") || "");
     const content = String(formData.get("content") || "");
 
