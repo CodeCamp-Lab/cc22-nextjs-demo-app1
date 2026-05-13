@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getNewsById } from "../services";
 import { use } from "react";
+import { notFound } from 'next/navigation';
 
 type NewsDetailPageProp = {
   params: Promise<{ id: string }>;
@@ -11,7 +12,7 @@ export default function NewsDetailPage({ params }: NewsDetailPageProp) {
   const news = use(getNewsById(+id));
 
   if (!news) {
-    return <div>not found</div>;
+    notFound();
   }
 
   return (
