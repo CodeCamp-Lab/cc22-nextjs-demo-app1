@@ -1,11 +1,17 @@
 import Link from "next/link";
 import { getNewsById } from "../services";
 import { use } from "react";
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
+import { getNewsMetadata } from "../services/getNewsMetadata";
 
 type NewsDetailPageProp = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: NewsDetailPageProp) {
+  const { id } = await params;
+  return getNewsMetadata(+id);
+}
 
 export default function NewsDetailPage({ params }: NewsDetailPageProp) {
   const { id } = use(params);

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { getNews } from "./services";
 
+export const metadata = {
+    title: "News",
+    description: "Lastest news and updates"
+}
+
 export default async function NewsPage() {
   const newsList = await getNews();
 
